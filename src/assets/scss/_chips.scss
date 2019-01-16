@@ -1,0 +1,98 @@
+.chips {
+	text-align: center;
+	padding: 10px;
+}
+
+.chip {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 5px;
+	cursor: pointer;
+	font-size: 25px;
+	font-weight: 700;
+	position: relative;
+
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		display: block;
+		border: 10px solid rgba($white, 0.5);
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 100%;
+	}
+}
+
+.chip--peach {
+	background-color: $peach;
+	color: $black;
+}
+
+.chip--white {
+	background-color: $white;
+	color: $black;
+}
+
+.chip--pink {
+	background-color: $pink;
+	color: $black;
+}
+
+.chip--red {
+	background-color: $red;
+}
+
+.chip--blue {
+	background-color: $blue;
+}
+
+.chip--yellow {
+	background-color: $yellow;
+}
+
+.chip--green {
+	background-color: $green;
+}
+
+.chip--black {
+	background-color: $black;
+}
+
+.chip--purple {
+	background-color: $purple;
+}
+
+.chip--orange {
+	background-color: $orange;
+}
+
+.chip--grey {
+	background-color: $grey;
+}
+
+.chip--disabled {
+	cursor: no-drop;
+
+	&::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		background-image:
+			repeating-linear-gradient(
+				45deg,
+				rgba($white, 0.2) 0 10px,
+				rgba($black, 0.2) 10px 20px
+			);
+		border-radius: 100%;
+	}
+}

@@ -1,0 +1,22 @@
+.actions {
+	padding: 10px 10px 20px;
+	text-align: center;
+}
+
+.button {
+	appearance: none;
+	margin: 0 5px;
+	padding: 5px 10px;
+	min-width: 70px;
+	border: 0;
+	background-color: $white;
+	transition: $duration $easing;
+	transition-property: background-color;
+	cursor: pointer;
+	font-size: 24px;
+	border-radius: 5px;
+
+	&:hover {
+		background-color: $peach;
+	}
+}
