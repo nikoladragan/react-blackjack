@@ -1,6 +1,8 @@
 .chips {
 	text-align: center;
 	padding: 10px;
+	white-space: nowrap;
+	overflow: auto;
 }
 
 .chip {
@@ -26,6 +28,16 @@
 		top: 0;
 		left: 0;
 		border-radius: 100%;
+	}
+
+	@media screen and (max-width: 600px) {
+		width: 60px;
+		height: 60px;
+		font-size: 15px;
+
+		&::before {
+			border-width: 5px;
+		}
 	}
 }
 

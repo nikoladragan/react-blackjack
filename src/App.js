@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class App extends Component {
 	render() {
 		return (
-			<>
+			<div className="root" style={{ height: `${window.innerHeight}px` }}>
 				<div className="header"></div>
 				<div className="footer">
 					<div className="actions">
@@ -28,7 +28,7 @@ class App extends Component {
 						<div className="chip chip--grey chip--disabled">5000€</div>
 					</div>
 				</div>
-			</>
+			</div>
 		);
 	}
 }
