@@ -1,5 +1,6 @@
 {
 	"extends": "stylelint-config-standard",
+	"ignoreFiles": ["**/*.js"],
 	"rules": {
 		"indentation": "tab",
 		"color-named": "never",

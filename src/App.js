@@ -1,36 +1,31 @@
 import React, { Component } from 'react';
+import Chips from './components/Chips/Chips';
+import Actions from './components/Actions/Actions';
+import { Context } from './context';
+import UserInfo from './components/UserInfo/UserInfo';
 
 class App extends Component {
+	componentDidMount() {
+		console.log(this.context);
+	}
 	render() {
+		const css = {
+			height: `${window.innerHeight}px`
+		};
 		return (
-			<div className="root" style={{ height: `${window.innerHeight}px` }}>
-				<div className="header"></div>
+			<div className="root" style={css}>
+				<div className="header">
+					<UserInfo credit={this.context.credit} activeBet={this.context.activeBet} />
+				</div>
 				<div className="footer">
-					<div className="actions">
-						<button type="button" className="button">Hit</button>
-						<button type="button" className="button">Stand</button>
-						<button type="button" className="button">Split</button>
-						<button type="button" className="button">Double</button>
-						<button type="button" className="button">Insurance</button>
-						<button type="button" className="button">Surrender</button>
-					</div>
-					<div className="chips">
-						<div className="chip chip--peach">0.25€</div>
-						<div className="chip chip--white">1€</div>
-						<div className="chip chip--pink">2.5€</div>
-						<div className="chip chip--red">5€</div>
-						<div className="chip chip--blue">10€</div>
-						<div className="chip chip--yellow">20€</div>
-						<div className="chip chip--green">25€</div>
-						<div className="chip chip--black">100€</div>
-						<div className="chip chip--purple">500€</div>
-						<div className="chip chip--orange">1000€</div>
-						<div className="chip chip--grey chip--disabled">5000€</div>
-					</div>
+					<Actions />
+					{this.context.started && <Chips />}
 				</div>
 			</div>
 		);
 	}
 }
+
+App.contextType = Context;
 
 export default App;

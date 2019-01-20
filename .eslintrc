@@ -18,7 +18,10 @@
 			"after": true
 		}],
 		"computed-property-spacing": [2, "never"],
-		"semi": 2
+		"semi": 2,
+		"no-undef": 1,
+		"no-unused-vars": 1,
+		"react/prop-types": [2, { "ignore": ["children"] }]
 	},
 	"extends": [
 		"eslint:recommended",

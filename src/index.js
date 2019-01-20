@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { ContextProvider } from './context';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const app = <ContextProvider><App /></ContextProvider>;
+
+ReactDOM.render(app, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
