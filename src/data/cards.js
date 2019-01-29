@@ -15,7 +15,8 @@ for(let i = 0; i < numberOfDecks; i++) {
 			cards.push({
 				value: typeof n === 'string' ? 10 : n,
 				suit: s,
-				name: n
+				name: n.toString(),
+				id: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 			});
 		});
 	});
