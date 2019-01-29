@@ -4,9 +4,9 @@ import { Context } from '../../context';
 class Actions extends Component {
 	startGame() {
 		this.context.doStart();
-		console.log(this.context);
 	}
 	render() {
+		console.log('ovo?', this.context.actions);
 		const c = this.context;
 		return (
 			<div className="actions">
@@ -16,7 +16,10 @@ class Actions extends Component {
 							type="button"
 							onClick={() => this.context.dealCards()}
 							className="button">Deal</button> }
-						{c.actions.hit && <button type="button" className="button">Hit</button> }
+						{c.actions.hit && <button
+							type="button"
+							className="button"
+							onClick={() => this.context.hit()}>Hit</button> }
 						{c.actions.stand && <button type="button" className="button">Stand</button> }
 						{c.actions.split && <button type="button" className="button">Split</button> }
 						{c.actions.double && <button type="button" className="button">Double</button> }
